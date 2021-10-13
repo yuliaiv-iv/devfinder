@@ -1,0 +1,44 @@
+.form {
+  position: relative;
+  margin-top: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+}
+
+.form__input {
+  width: calc(100% - 80px);
+  padding: 0 0 0 80px;
+  height: 70px;
+  border: 0;
+  border-radius: 15px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4B6A9B;
+}
+
+.form__icon {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+}
+
+.form__button {
+  position: absolute;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  width: 106px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #0079FF;
+  color: #fff;
+}

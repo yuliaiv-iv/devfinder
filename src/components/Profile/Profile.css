@@ -1,0 +1,129 @@
+.profile__container {
+  display: grid; 
+  grid-template-columns: 117px 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px;
+  margin-top: 25px;
+  background-color: #FEFEFE;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+  padding: 48px;
+  grid-template-areas: 
+    "image name date"
+    "image bio bio"
+    "image info info"
+    "image extra extra"
+}
+.profile__image { grid-area: image; }
+.profile__name { grid-area: name; }
+.profile__date { grid-area: date; }
+.profile__bio { grid-area: bio; }
+.profile__info { grid-area: info; }
+.profile__extra { grid-area: extra; }
+
+.profile__image {
+  max-width: 117px;
+  border-radius: 50%;
+}
+
+.profile__user {
+  margin-left: 37px;
+}
+
+.profile__name {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+  color: #2B3442;
+  margin: 0;
+}
+
+.profile__link {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0079FF;
+  text-decoration: none;
+}
+
+.profile__date {
+  margin: 0;
+  margin-top: 8px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: right;
+  color: #697C9A;
+}
+
+.profile__bio {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #4B6A9B;
+  margin: 0;
+  margin-left: 37px;
+  margin-top: 15px;
+}
+
+.profile__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 37px;
+  margin-top: 32px;
+  background: #F6F8FF;
+  border-radius: 10px;
+  padding: 15px 0 15px 32px;
+}
+
+.profile__title {
+  margin: 0;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #4B6A9B;
+}
+
+.profile__number {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #2B3442;
+}
+
+.profile__extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 30px;
+  margin-left: 37px;
+  margin-top: 37px;
+}
+
+.profile__block {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.profile__text {
+  margin: 0;
+  margin-left: 18px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4B6A9B;
+}

@@ -1,0 +1,39 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 140px;
+}
+
+.header__title {
+  font-family: 'Space Mono', monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+  margin: 0;
+}
+
+.header__switch {
+  padding: 0;
+  border: none;
+  box-sizing: content-box;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.header__mode {
+  margin: 0;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  color: #697C9A;
+}
