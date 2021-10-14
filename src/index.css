@@ -19,3 +19,15 @@ body {
   -moz-text-size-adjust: 100%;
   background-color: var(--background);
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    max-width: 573px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    max-width: 573px;
+  }
+}

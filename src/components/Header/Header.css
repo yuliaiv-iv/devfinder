@@ -1,5 +1,4 @@
 .header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 140px;
@@ -37,4 +36,17 @@
   text-transform: uppercase;
   margin-right: 15px;
   color: var(--ExtraText);
+}
+
+@media screen and (max-width: 620px) {
+  .header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .header {
+    margin-top: 30px;
+  }
 }

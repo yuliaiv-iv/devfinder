@@ -69,3 +69,53 @@
   top: 25px;
   right: 140px;
 }
+
+@media screen and (max-width: 620px) {
+  .form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form__input {
+    width: calc(100% - 40px);
+    padding: 0 0 0 40px;
+    font-size: 13px;
+    height: 60px;
+  }
+  .form__button {
+    font-size: 14px;
+    width: 80px;
+    top: 5px;
+  }
+  .form__icon {
+    left: 10px;
+    top: 20px;
+  }
+  .form__error {
+    font-size: 13px;
+    top: 20px;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .form {
+    box-shadow: none;
+  }
+  .form__button {
+    position: relative;
+    width: 100%;
+    right: 0;
+  }
+  .form__icon {
+    left: 10px;
+    top: 20px;
+  }
+  .form__error {
+    font-size: 13px;
+    top: 20px;
+    right: 10px;
+  }
+}

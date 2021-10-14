@@ -49,7 +49,7 @@ export const renderInfoSection = (icon, info, user) => {
 
 export const renderNumberSection = (title, info) => {
   return (
-    <div className="profile__detaills">
+    <div className="profile__details">
       <p className="profile__title">{title}</p>
       <div className="profile__number">{info}</div>
     </div>

@@ -60,7 +60,6 @@
 }
 
 .profile__date {
-  margin: 0;
   margin-top: 8px;
   font-family: "Space Mono";
   font-style: normal;
@@ -162,4 +161,108 @@
 
 .profile__text_na {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+  .profile__container {
+    padding: 40px;
+    display: grid; 
+    grid-template-columns: 117px 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+      "image name"
+      "image date"
+      "bio bio"
+      "info info"
+      "extra extra"
+  }
+  .profile__bio {
+    margin-top: 24px;
+    margin-left: 0;
+  }
+  .profile__info {
+    margin-left: 0;
+  }
+  .profile__date {
+    margin-left: 37px;
+    margin-top: 0;
+    text-align: left;
+  }
+  .profile__extra {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .profile__container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .profile__container {
+    margin-top: 20px;
+    padding: 32px 24px;
+    grid-template-columns: 70px 1fr; 
+  }
+  .profile__image {
+    max-width: 70px;
+  }
+  .profile__user {
+    margin-left: 20px;
+  }
+  .profile__name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .profile__link {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .profile__date {
+    font-size: 13px;
+    line-height: 19px;
+    margin-left: 20px;
+  }
+  .profile__bio {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .profile__info {
+    margin-top: 23px;
+    padding: 15px 0 15px 0px;
+  }
+  .profile__title {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .profile__number {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .profile__extra {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+  }
+  .profile__block {
+    margin-bottom: 16px;
+  }
+  .profile__block:last-child {
+    margin-bottom: 0;
+  }
+  .profile__text {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .profile__blog {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .profile__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
