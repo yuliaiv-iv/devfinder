@@ -23,11 +23,26 @@ export const convertDate = (newsDate) => {
   return convertedDate;
 };
 
-export const renderInfoSection = (icon, info) => {
+export const renderInfoSection = (icon, info, user) => {
   return (
     <div className="profile__block">
-      {icon}
-      <p className="profile__text">{!info ? "Not Available" : info}</p>
+      <div className={`profile__icon ${!info ? "profile__icon_na" : ""}`}>
+        {icon}
+      </div>
+      {user ? (
+        <a
+          className="profile__blog"
+          target="_blank"
+          rel="noreferrer"
+          href={info}
+        >
+          {info}
+        </a>
+      ) : (
+        <p className={`profile__text ${!info ? "profile__text_na" : ""}`}>
+          {!info ? "Not Available" : info}
+        </p>
+      )}
     </div>
   );
 };

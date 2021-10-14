@@ -5,6 +5,10 @@
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
 }
 
+.form_dark {
+  box-shadow: none;
+}
+
 .form__input {
   width: calc(100% - 80px);
   padding: 0 0 0 80px;
@@ -16,7 +20,12 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  color: #4B6A9B;
+  color: var(--InputText);
+  background-color: var(--secondBackground);
+}
+
+.form__input::placeholder {
+  color: var(--PrimaryText);
 }
 
 .form__icon {
@@ -34,6 +43,7 @@
   border: 0;
   border-radius: 10px;
   width: 106px;
+  cursor: pointer;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: bold;
@@ -41,4 +51,21 @@
   line-height: 24px;
   background-color: #0079FF;
   color: #fff;
+}
+
+.form__button:hover {
+  background-color: #60ABFF;
+}
+
+.form__error {
+  position: absolute;
+  margin: 0;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #F74646;
+  top: 25px;
+  right: 140px;
 }

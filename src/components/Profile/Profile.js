@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Profile.css";
+import ThemeContext from "../../contexts/ThemeContext";
 import { Company } from "../Icons/Company";
 import { Web } from "../Icons/Web";
 import { Twitter } from "../Icons/Twitter";
@@ -8,9 +9,12 @@ import { convertDate } from "../../utils/config";
 import { renderInfoSection, renderNumberSection } from "../../utils/config";
 
 function Profile({ user }) {
+  const { dark } = useContext(ThemeContext);
+
   const {
     name,
     login,
+    html_url,
     public_repos,
     followers,
     following,
@@ -24,13 +28,17 @@ function Profile({ user }) {
   } = user;
 
   return (
-    <main className="profile__container">
+    <main
+      className={`profile__container ${dark ? "profile__container_dark" : ""}`}
+    >
       <img src={avatar_url} alt="profile" className="profile__image" />
       <div className="profile__user">
         <h2 className="profile__name">{name}</h2>
         <a
           className="profile__link"
-          href="https://api.github.com/users/octocat"
+          href={html_url}
+          target="_blank"
+          rel="noreferrer"
         >
           {`@${login}`}
         </a>
@@ -45,7 +53,7 @@ function Profile({ user }) {
       <div className="profile__extra">
         {renderInfoSection(<Location />, location)}
         {renderInfoSection(<Twitter />, twitter_username)}
-        {renderInfoSection(<Web />, blog)}
+        {renderInfoSection(<Web />, blog, user.blog)}
         {renderInfoSection(<Company />, company)}
       </div>
     </main>

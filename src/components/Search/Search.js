@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Search.css";
 import { SearchIcon } from "../Icons/Search";
-// import * as users from "../../utils/githubApi";
+import ThemeContext from "../../contexts/ThemeContext";
 
-function Search({ getUser }) {
+function Search({ getUser, error }) {
   const [searchedUser, setSearchedUser] = useState("");
+  const { dark } = useContext(ThemeContext);
 
   const handleInputSearch = (e) => {
     setSearchedUser(e.target.value);
@@ -13,10 +14,10 @@ function Search({ getUser }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     getUser(searchedUser);
-  }
+  };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className={`form ${dark ? "form_dark" : ""}`} onSubmit={handleSubmit}>
       <SearchIcon className="form__icon" />
       <input
         onChange={handleInputSearch}
@@ -24,6 +25,7 @@ function Search({ getUser }) {
         className="form__input"
         placeholder="Search GitHub username…"
       />
+      {error ? <p className="form__error">No results</p> : null}
       <button className="form__button">Search</button>
     </form>
   );

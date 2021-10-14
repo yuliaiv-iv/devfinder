@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
@@ -7,6 +6,7 @@ import * as users from "./utils/githubApi";
 
 function App() {
   const [user, setUser] = useState("");
+  const [error, serError] = useState(false);
 
   useEffect(() => {
     getUser();
@@ -17,16 +17,18 @@ function App() {
       .searchUser(data)
       .then((result) => {
         setUser(result);
+        serError(false);
       })
       .catch((err) => {
         console.log(err);
+        serError(true);
       });
   };
 
   return (
     <div className="App">
       <Header />
-      <Search getUser={getUser} />
+      <Search getUser={getUser} error={error} />
       <Profile user={user} />
     </div>
   );
