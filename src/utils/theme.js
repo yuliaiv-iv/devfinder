@@ -1,20 +1,9 @@
-import { createContext } from "react";
+export const lightTheme = [
+  '--background: #F6F8FF',
+  '--PrimaryText: #4B6A9B',
+];
 
-// export const lightTheme = {
-//   body: "#F6F8FF",
-// };
-
-// export const darkTheme = {
-//   body: "#141D2F",
-// };
-
-export const themes = {
-  light: {
-    body: "#F6F8FF",
-  },
-  dark: {
-    body: "#141D2F",
-  },
-};
-
-export const ThemeContext = createContext(themes.light);
+export const darkTheme = [
+  '--background: #000000',
+  '--PrimaryText: #FFFFFF',
+];

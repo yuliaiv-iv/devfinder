@@ -4,9 +4,6 @@ import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
 import Search from "./components/Search/Search";
 import * as users from "./utils/githubApi";
-import {themes} from "./utils/theme";
-
-console.log(themes)
 
 function App() {
   const [user, setUser] = useState("");
